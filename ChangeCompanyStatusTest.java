@@ -1,10 +1,7 @@
 package API.Campaigns;
-
-
 import API.RegistrationAutorization.SSCore;
 import org.json.JSONObject;
 import org.junit.Test;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -27,7 +24,7 @@ public class ChangeCompanyStatusTest extends SSCore {
         idTest = resultSet.getInt(1); }
                 System.out.println(idTest);
 
-        String response = givenCabinet()
+        givenCabinet()
                 .body(jsonModerate)
                 .patch(urlCamp+'/'+idTest)
                 .then()
@@ -36,7 +33,6 @@ public class ChangeCompanyStatusTest extends SSCore {
                 .response()
                 .body().prettyPrint();
 
-        System.out.println(response);
         statusId = 1;
 
     }
