@@ -19,7 +19,7 @@ public class ChangeCompanyStatusTest extends SSCore {
 
         ResultSet resultSet =
                 getStatementFromDbSS()
-                .executeQuery("SELECT id FROM ss.campaign WHERE  name LIKE \"TEST_Camp%\" AND status = \"new\" AND owner_id = 85 LIMIT 1");
+                .executeQuery("SELECT ###### FROM ####### WHERE  name LIKE \"TEST%\" AND status = \"new\" AND owner_id = ##### LIMIT 1");
                 while (resultSet.next()){
         idTest = resultSet.getInt(1); }
                 System.out.println(idTest);
